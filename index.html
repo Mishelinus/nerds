@@ -4,20 +4,19 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: {{projectTitle}}</title>
-  <!--<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest"> -->
+  <!-- <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png"> -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/32.png">
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
+  <!--  <link rel="manifest" href="/site.webmanifest"> -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
   <header class="header">
     <div class="container">
       <nav class="header__nav">
-        <a href="" class="header__logo">
+        <a class="header__logo">
           <img src="img/header/nerds-logo.svg" alt="">
         </a>
         <ul>
@@ -28,14 +27,11 @@
         </ul>
         <a href="#" class="basket">Корзина</a>
       </nav>
-
     </div>
     <div class="header__content">
       <input type="radio" name="slides" id="point1" checked>
       <input type="radio" name="slides" id="point1">
       <input type="radio" name="slides" id="point1">
-
-
     </div>
   </header>
   <main>
@@ -87,7 +83,6 @@
       </div>
     </section>
     <section class="services">
-
       <div class="container">
         <h2 class="visually-hidden">
           Наши услуги
@@ -201,8 +196,7 @@
             <p>
               наб. Реки Карповки,<br> 5 лит П, Санкт-Петербург <br>
               <a href="tel:+78005558628">+7 800 555-86-28</a>
-             </p>
-            
+            </p>
             <a class="map-contact__btn btn" href="#">Напишите нам</a>
           </div>
         </div>
@@ -212,6 +206,7 @@
   <footer class="footer">
     <div class="container">
       <section class="social">
+        <h2 class="visually-hidden"> Мы в социальных сетях</h2>
         <ul>
           <li><a href="#"><img src="img/footer/icon/icon-vk.svg" alt="мы во вконтакте" width="26" height="15">мы во
               вконтакте</a></li>
@@ -224,18 +219,28 @@
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </section>
-
-
-
-
-
     </div>
   </footer>
-
-
-
-
-
+  <section class="contact-us">
+    <h2>Напишите нам</h2>
+    <form method="post" action="https://echo.htmlacademy.ru">
+      <div class="contact-us__box">
+     <p><label>Ваше имя:<br>
+      <input type="text" name="name" placeholder="Имя Фамилия" required>
+      </label></p>
+        
+      
+      <p><label>Ваш email:<br>
+        <input type="email" name="email" placeholder="email@example.com " required>
+      </label></p>
+    </div>
+      <label>Текст письма:<br>
+        <textarea name="text"  placeholder="В свободной форме" required></textarea>
+      </label>
+      <input class="btn contact-button" type="submit" value="Отправить">
+    </form>
+    <button class="contact-btn-close" type="button">закрыть</button>
+  </section>
 </body>
 
 </html>
