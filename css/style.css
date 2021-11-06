@@ -24,6 +24,11 @@ html {
    font-size: 55px;
    color: #000;
 }
+
+button {
+   border: none;
+}
+
 .btn {
    height: 50px;
    border-radius: 3px;
@@ -31,14 +36,8 @@ html {
    text-transform: uppercase;
    cursor: pointer;
 }
-/* .line {
-   width: 1158px;
-   height: 2px;
-   background: #EEEEEE;
-   margin-bottom: 39px;
-   margin: 0 auto;
 
-} */
+
 
 
 
@@ -60,8 +59,6 @@ html {
    margin: 0 auto;
 }
 
-.logo {}
-
 .header__logo {}
 
 .header__nav {
@@ -77,8 +74,6 @@ html {
 .header__nav a + a {
    margin-left: 45px;
 }
-
-.link {}
 
 .header__basket {
    line-height: 66px;
@@ -116,9 +111,6 @@ html {
 
    
 }
-
-.img1 {}
-
 .slides__inner {
    max-width: 520px;
    padding-top: 78px;
@@ -207,11 +199,7 @@ html {
    margin-bottom: 49px;
    padding-right: 30px;
    text-align: left;
-
-
 }
-
-
 .services__btn {
 background: #FB565A;
 width: 160px;
@@ -220,15 +208,6 @@ font-weight: 500;
 color: #FFFFFF;
 
 }
-button {
-    border: none;
- }
-
- 
-
- 
-
-
 .partners {
    width: 1159px;
    max-height: 184px;
@@ -241,9 +220,9 @@ button {
 .partners__items li{
    list-style-type: none;
 }
-dl {
+/* dl {
    display: flex;
-}
+} */
 /* about*/
 .about {
    margin-bottom: 87px;
@@ -317,20 +296,18 @@ dl {
    margin-bottom: 37px;
 }
 
-thead {
-   text-align: center;
-}
-
-
 .about-table__num {
    width: 358px;
-   text-align: center;
+   text-align: left;
    font-weight: 400;
    font-weight: 700;
    font-size: 45px;
 }
+.about-table__feature {
+   /* padding-left: 15px; */
+}
 
-sup {
+.about sup {
    font-size: 26px;
    font-weight: 700;
    color: #000;
