@@ -3,11 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: {{projectTitle}}</title>
-  <!-- <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png"> -->
-  <link rel="icon" type="image/png" sizes="32x32" href="img/32.png">
-  <!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
-  <!--  <link rel="manifest" href="/site.webmanifest"> -->
+  <title>HTML Academy: Интернет магазин «Nёrds»</title>
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
@@ -35,7 +39,7 @@
     <section class="slider">
       <div class="container">
         <h2 class="visually-hidden">Наши преимущества</h2>
-        <!-- <div class="slides singl__slides">
+        <div class="slides slides__one ">
           <div class="slides__inner">
             <div class="title slides__title">Только ночь, <br>
               только хардкор</div>
@@ -43,13 +47,13 @@
               Работать днем, как все? Мы против этого. <br>
               Ближе к полуночи работа только начинается.
             </div>
-            <div class="btn slides__btn">
+            <a class="btn slides__btn">
               УЗНАТЬ БОЛЬШЕ
-            </div>
+            </a>
           </div>
           <div class="slides__img"><img src="img/header/slider/nerds-index-slide3.png" alt="slide"></div>
-        </div> -->
-        <!-- <div class="slides singl__slides">
+        </div>
+        <div class="slides slides__one">
           <div class="slides__inner">
             <div class="title slides__title">Любим математику <br>
               как никто другой</div>
@@ -57,25 +61,30 @@
               Никакого креатива, только математические формулы <br>
               для расчета идеальных пропорций
             </div>
-            <div class="btn slides__btn">
+            <a class="btn slides__btn">
               УЗНАТЬ БОЛЬШЕ
-            </div>
+            </a>
           </div>
           <div class="slides__img"><img src="img/header/slider/nerds-index-slide2.png" alt="slide"></div>
-        </div> -->
-        <div class="slides singl__slides">
+        </div>
+        <div class="slides slides__one slides__active">
           <div class="slides__inner">
-            <div class="title slides__title">Долго, дорого, скрупулезно.</div>
+            <div class="title slides__title">Долго, дорого, <br> скрупулезно.</div>
             <div class="slides__text">
               Математически выверенный дизайн <br>
               для вашего сайта или мобильного приложения.
             </div>
-            <div class="btn slides__btn">
+            <a class="btn slides__btn">
               УЗНАТЬ БОЛЬШЕ
-            </div>
+            </a>
           </div>
-          <div class="slides__img"><img src="img/header/slider/nerds-index-slide1.png" alt="slide"></div>
+          <div class="slides__img"><img src="img/header/slider/nerds-index-slide1.png" alt="slide" width="760" height="431"></div>
         </div>
+        <ul class="slides__control ">
+          <li class="slides__control-active"><button type="button"></button></li>
+          <li><button type="button"></button></li>
+          <li><button type="button"></button></li>
+        </ul>
       </div>
     </section>
     <section class="services">
@@ -204,7 +213,8 @@
       <section class="social">
         <h2 class="visually-hidden"> Мы в социальных сетях</h2>
         <ul>
-          <li><a href="#"><img src="img/footer/icon/icon-vk.svg" alt="мы во вконтакте" width="26" height="15">мы во
+          <li><a href="#" title="мы во вконтакте"><img src="img/footer/icon/icon-vk.svg" alt="мы во вконтакте"
+                width="26" height="15">мы во
               вконтакте</a></li>
           <li><a href="#"><img src="img/footer/icon/fb-icon.svg" alt="мы в  facebook">мы в
               facebook</a></li>
