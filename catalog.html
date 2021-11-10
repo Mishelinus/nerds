@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Интернет магазин «Nёrds»</title>
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="header__nav">
+        <a href="index.html" class="header__logo">
+          <img src="img/header/nerds-logo.svg" alt="">
+        </a>
+        <ul>
+          <li><a class="link" href="#" >Студия</a></li>
+          <li><a class="link" href="#" >Клиенты</a></li>
+          <li><a class="link">Магазин</a></li>
+          <li><a class="link" href="#" >Контакты</a></li>
+        </ul>
+        <a href="#" class="basket">Корзина</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1>Магазин готовых шаблонов</h1>
+    <section>
+      <h2 class="visually-hidden">Фильтр шаблонов</h2>
+      <form class="form-catalog" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="form-catalog__fieldset">
+          <legend class="form-catalog__legend">Стоимость:</legend>
+          <label>
+            <input type="range">
+          </label>
+          <label>от
+            <input type="text" name="min-price">
+          </label>
+          <label>до
+            <input type="text" name="max-price">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Сетка:</legend>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="grid" value="adaptive" checked>
+              </label>Адаптивная
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="grid" value="fixed">
+              </label>Фиксированная
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="grid" value="elastic">
+              </label>Резиновая
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Особенности:</legend>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" name="checkbox" value="slider" checked>
+              </label>Слайдер
+            </li>
+            <li> <label>
+                <input type="checkbox" name="checkbox" value="advantages">
+              </label>Блок преимуществ
+            </li>
+            <li> <label>
+                <input type="checkbox" name="checkbox" value="news" checked>
+              </label>Новости
+            </li>
+            <li> <label>
+                <input type="checkbox" name="checkbox" value="galery">
+              </label>Галерея
+            </li>
+            <li> <label>
+                <input type="checkbox" name="checkbox" value="basket">
+              </label>Корзина
+            </li>
+          </ul>
+          <input type="submit">
+        </fieldset>
+      </form>
+    </section>
+    <section class="catalog">
+      <h2 class="visually-hidden">Каталог шаблонов</h2>
+      <div class="catalog__header">
+        <p class="catalog__title">Сортировать:</p>
+        <ul class="catalog__sort-type">
+          <li>По цене</li>
+          <li>По типу</li>
+          <li>По названию</li>
+        </ul>
+        <ul class="catalog__sort-direction">
+          <li class="sort-direction__item">&#9660;<span class="visually-hidden">сортировать по убыванию</span></li>
+          <li class="sort-direction__item"> &#9650;<span class="visually-hidden">сортировать по возрастанию</span>
+          </li>
+        </ul>
+      </div>
+      <ul class="catalog-list">
+        <li class="catalog-list__item">
+          <picture class="list-item__img">
+            <source type="image/webp" srcset="img/catalog/sedona.webp">
+            <img class="card-product__image" src="img/catalog/img-sedona1.jpg" alt="Sedona" width="358" height="578">
+          </picture>
+          <div class="list-item__descr">
+            <div class="list-item__title"></div>
+            <div class="list-item__text"></div>
+            <a class="list-item__btn btn" href="#">9 900 р</a>
+          </div>
+        </li>
+        <li class="catalog-list__item">
+          <picture class="list-item__img">
+            <source type="image/webp" srcset="img/catalog/sedona.webp">
+            <img class="card-product__image" src="img/catalog/img-sedona1.jpg" alt="Sedona" width="358" height="578">
+          </picture>
+          <div class="list-item__descr">
+            <div class="list-item__title"></div>
+            <div class="list-item__text"></div>
+            <a class="list-item__btn btn" href="#">9 900 р</a>
+          </div>
+        </li>
+        <li class="catalog-list__item">
+          <picture class="list-item__img">
+            <source type="image/webp" srcset="img/catalog/sedona.webp">
+            <img class="card-product__image" src="img/catalog/img-sedona1.jpg" alt="Sedona" width="358" height="578">
+          </picture>
+          <div class="list-item__descr">
+            <div class="list-item__title"></div>
+            <div class="list-item__text"></div>
+            <a class="list-item__btn btn" href="#">9 900 р</a>
+          </div>
+        </li>
+        <li class="catalog-list__item">
+          <picture class="list-item__img">
+            <source type="image/webp" srcset="img/catalog/sedona.webp">
+            <img class="card-product__image" src="img/catalog/img-sedona1.jpg" alt="Sedona" width="358" height="578">
+          </picture>
+          <div class="list-item__descr">
+            <div class="list-item__title"></div>
+            <div class="list-item__text"></div>
+            <a class="list-item__btn btn" href="#">9 900 р</a>
+          </div>
+        </li>
+        <li class="catalog-list__item">
+          <picture class="list-item__img">
+            <source type="image/webp" srcset="img/catalog/sedona.webp">
+            <img class="card-product__image" src="img/catalog/img-sedona1.jpg" alt="Sedona" width="358" height="578">
+          </picture>
+          <div class="list-item__descr">
+            <div class="list-item__title"></div>
+            <div class="list-item__text"></div>
+            <a class="list-item__btn btn" href="#">9 900 р</a>
+          </div>
+        </li>
+        <li class="catalog-list__item">
+          <picture class="list-item__img">
+            <source type="image/webp" srcset="img/catalog/sedona.webp">
+            <img class="card-product__image" src="img/catalog/img-sedona1.jpg" alt="Sedona" width="358" height="578">
+          </picture>
+          <div class="list-item__descr">
+            <div class="list-item__title"></div>
+            <div class="list-item__text"></div>
+            <a class="list-item__btn btn" href="#">9 900 р</a>
+          </div>
+        </li>
+      </ul>
+      <ul class="pagination">
+        <li><a>1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">Следующая</a></li>
+      </ul>
+    </section>
+    <section class="map">
+      <h2 class="visually-hidden"> Как нас найти</h2>
+      <img src="img/footer/map.jpg" alt="карта" height="416">
+      <div class="container">
+        <div class="map__wrapper">
+          <div class="map-contact">
+            <div class="map-contact__title">
+              NЁRDS DESIGN STUDIO
+            </div>
+            <p>
+              наб. Реки Карповки,<br> 5 лит П, Санкт-Петербург <br>
+              <a href="tel:+78005558628">+7 800 555-86-28</a>
+            </p>
+            <a class="map-contact__btn btn" href="#">Напишите нам</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <section class="social">
+        <h2 class="visually-hidden"> Мы в социальных сетях</h2>
+        <ul>
+          <li><a href="#"><img src="img/footer/icon/icon-vk.svg" alt="мы во вконтакте" width="26" height="15">мы во
+              вконтакте</a></li>
+          <li><a href="#"><img src="img/footer/icon/fb-icon.svg" alt="мы в  facebook">мы в
+              facebook</a></li>
+          <li><a href="#"><img src="img/footer/icon/insta-icon.svg" alt="мы в instagram">мы в
+              instagram</a></li>
+        </ul>
+        <div class="social__actions">
+          <p>Давайте дружить, это выгодно!</p>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </section>
+    </div>
+  </footer>
+  <section class="contact-us">
+    <h2>Напишите нам</h2>
+    <form method="post" action="https://echo.htmlacademy.ru">
+      <div class="contact-us__box">
+        <p><label>Ваше имя:<br>
+            <input type="text" name="name" placeholder="Имя Фамилия" required>
+          </label></p>
+
+
+        <p><label>Ваш email:<br>
+            <input type="email" name="email" placeholder="email@example.com " required>
+          </label></p>
+      </div>
+      <label>Текст письма:<br>
+        <textarea name="text" placeholder="В свободной форме" required></textarea>
+      </label>
+      <input class="btn contact-button" type="submit" value="Отправить">
+    </form>
+    <button class="contact-btn-close" type="button">закрыть</button>
+  </section>
+</body>
+
+</html>
