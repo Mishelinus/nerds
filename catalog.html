@@ -3,11 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: {{projectTitle}}</title>
-  <!-- <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png"> -->
-  <link rel="icon" type="image/png" sizes="32x32" href="img/32.png">
-  <!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
-  <!--  <link rel="manifest" href="/site.webmanifest"> -->
+  <title>HTML Academy: Интернет магазин «Nёrds»</title>
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
@@ -21,10 +25,10 @@
           <img src="img/header/nerds-logo.svg" alt="">
         </a>
         <ul>
-          <li><a href="" class="link">Студия</a></li>
-          <li><a href="" class="link">Клиенты</a></li>
-          <li><a href="catalog.html" class="link">Магазин</a></li>
-          <li><a href="" class="link">Контакты</a></li>
+          <li><a class="link" href="#" >Студия</a></li>
+          <li><a class="link" href="#" >Клиенты</a></li>
+          <li><a class="link">Магазин</a></li>
+          <li><a class="link" href="#" >Контакты</a></li>
         </ul>
         <a href="#" class="basket">Корзина</a>
       </nav>
@@ -34,17 +38,17 @@
     <h1>Магазин готовых шаблонов</h1>
     <section>
       <h2 class="visually-hidden">Фильтр шаблонов</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <fieldset>
-          <legend>Стоимость:</legend>
+      <form class="form-catalog" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="form-catalog__fieldset">
+          <legend class="form-catalog__legend">Стоимость:</legend>
           <label>
             <input type="range">
           </label>
           <label>от
-            <input type="text">
+            <input type="text" name="min-price">
           </label>
           <label>до
-            <input type="text">
+            <input type="text" name="max-price">
           </label>
         </fieldset>
         <fieldset>
@@ -72,23 +76,23 @@
           <ul>
             <li>
               <label>
-                <input type="checkbox" name="slider" checked>
+                <input type="checkbox" name="checkbox" value="slider" checked>
               </label>Слайдер
             </li>
             <li> <label>
-                <input type="checkbox" name="advantages">
+                <input type="checkbox" name="checkbox" value="advantages">
               </label>Блок преимуществ
             </li>
             <li> <label>
-                <input type="checkbox" name="news" checked>
+                <input type="checkbox" name="checkbox" value="news" checked>
               </label>Новости
             </li>
             <li> <label>
-                <input type="checkbox" name="galery">
+                <input type="checkbox" name="checkbox" value="galery">
               </label>Галерея
             </li>
             <li> <label>
-                <input type="checkbox" name="basket">
+                <input type="checkbox" name="checkbox" value="basket">
               </label>Корзина
             </li>
           </ul>
@@ -97,38 +101,95 @@
       </form>
     </section>
     <section class="catalog">
-      <h2 class="visually-hidden">отсортированные шаблоны</h2>
-      <ul>
-        <li>Сортировать:</li>
-        <li>По цене</li>
-        <li>По типу</li>
-        <li>По названию</li>
-        <li>arrow_bottom</li>
-        <li>arrow_top</li>
-      </ul>
-      <ul>
-        <li>
-          <div class="catalog-item__head"></div>
-          <div class="catalog-item__img"></div>
-          <div class="catalog-item__descr">
-            <div class="catalog-item__title"></div>
-            <div class="catalog-item__text"></div>
-            <div class="catalog-item__btn btn">9 900 р</div>
+      <h2 class="visually-hidden">Каталог шаблонов</h2>
+      <div class="catalog__header">
+        <p class="catalog__title">Сортировать:</p>
+        <ul class="catalog__sort-type">
+          <li>По цене</li>
+          <li>По типу</li>
+          <li>По названию</li>
+        </ul>
+        <ul class="catalog__sort-direction">
+          <li class="sort-direction__item">&#9660;<span class="visually-hidden">сортировать по убыванию</span></li>
+          <li class="sort-direction__item"> &#9650;<span class="visually-hidden">сортировать по возрастанию</span>
+          </li>
+        </ul>
+      </div>
+      <ul class="catalog-list">
+        <li class="catalog-list__item">
+          <picture class="list-item__img">
+            <source type="image/webp" srcset="img/catalog/sedona.webp">
+            <img class="card-product__image" src="img/catalog/img-sedona1.jpg" alt="Sedona" width="358" height="578">
+          </picture>
+          <div class="list-item__descr">
+            <div class="list-item__title"></div>
+            <div class="list-item__text"></div>
+            <a class="list-item__btn btn" href="#">9 900 р</a>
+          </div>
+        </li>
+        <li class="catalog-list__item">
+          <picture class="list-item__img">
+            <source type="image/webp" srcset="img/catalog/sedona.webp">
+            <img class="card-product__image" src="img/catalog/img-sedona1.jpg" alt="Sedona" width="358" height="578">
+          </picture>
+          <div class="list-item__descr">
+            <div class="list-item__title"></div>
+            <div class="list-item__text"></div>
+            <a class="list-item__btn btn" href="#">9 900 р</a>
+          </div>
+        </li>
+        <li class="catalog-list__item">
+          <picture class="list-item__img">
+            <source type="image/webp" srcset="img/catalog/sedona.webp">
+            <img class="card-product__image" src="img/catalog/img-sedona1.jpg" alt="Sedona" width="358" height="578">
+          </picture>
+          <div class="list-item__descr">
+            <div class="list-item__title"></div>
+            <div class="list-item__text"></div>
+            <a class="list-item__btn btn" href="#">9 900 р</a>
+          </div>
+        </li>
+        <li class="catalog-list__item">
+          <picture class="list-item__img">
+            <source type="image/webp" srcset="img/catalog/sedona.webp">
+            <img class="card-product__image" src="img/catalog/img-sedona1.jpg" alt="Sedona" width="358" height="578">
+          </picture>
+          <div class="list-item__descr">
+            <div class="list-item__title"></div>
+            <div class="list-item__text"></div>
+            <a class="list-item__btn btn" href="#">9 900 р</a>
+          </div>
+        </li>
+        <li class="catalog-list__item">
+          <picture class="list-item__img">
+            <source type="image/webp" srcset="img/catalog/sedona.webp">
+            <img class="card-product__image" src="img/catalog/img-sedona1.jpg" alt="Sedona" width="358" height="578">
+          </picture>
+          <div class="list-item__descr">
+            <div class="list-item__title"></div>
+            <div class="list-item__text"></div>
+            <a class="list-item__btn btn" href="#">9 900 р</a>
+          </div>
+        </li>
+        <li class="catalog-list__item">
+          <picture class="list-item__img">
+            <source type="image/webp" srcset="img/catalog/sedona.webp">
+            <img class="card-product__image" src="img/catalog/img-sedona1.jpg" alt="Sedona" width="358" height="578">
+          </picture>
+          <div class="list-item__descr">
+            <div class="list-item__title"></div>
+            <div class="list-item__text"></div>
+            <a class="list-item__btn btn" href="#">9 900 р</a>
           </div>
         </li>
       </ul>
-      <ul>
+      <ul class="pagination">
         <li><a>1</a></li>
         <li><a href="#">2</a></li>
         <li><a href="#">3</a></li>
         <li><a href="#">Следующая</a></li>
       </ul>
     </section>
-
-
-
-
-
     <section class="map">
       <h2 class="visually-hidden"> Как нас найти</h2>
       <img src="img/footer/map.jpg" alt="карта" height="416">

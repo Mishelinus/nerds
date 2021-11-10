@@ -35,7 +35,7 @@ img {
   overflow: hidden;
   border: 0;
   padding: 0;
-  clip: rect(0 0 0 0);
+ clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
 }
@@ -403,7 +403,7 @@ button {
   padding: 49px 50px 0 50px;
 }
 .map-contact__title {
-  font-style: 18px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 30px;
   color: var(--title-color);

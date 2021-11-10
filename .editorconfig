@@ -13,7 +13,7 @@ indent_style = space
 # отступ равен (indent_size = 2) 2 пробелам
 indent_size = 2
 
-#конец строки
+#конец строки lf(MacOs, linux) или CRLF(Windows)
 end_of_line = lf
 
 # подрезать или нет концевые пробелы
