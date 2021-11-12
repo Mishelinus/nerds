@@ -112,7 +112,7 @@ button {
   display: block;
   top: 7px;
   left: -38px;
-  background: url(../img/header/cart-icon.png) 0 0 no-repeat;
+  background: url(../img/cart-icon.svg) 0 0 no-repeat;
   width: 22px;
   height: 22px;
 }
