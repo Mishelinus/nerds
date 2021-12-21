@@ -429,7 +429,7 @@ button {
   background: var(--yellow-dark);
 }
 
-/*  about  */
+/*  section about start */
 
 .about {
   margin-bottom: 87px;
@@ -520,27 +520,26 @@ button {
   font-weight: 700;
   color: var(--basic-black);
 }
-/*  partners   */
+/*  section about end */
+
+/*  section partners  start  */
 
 .partners__items {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
   align-items: center;
-  width: 1159px;
   height: 184px;
-  margin: 0 auto;
   border-top: 2px solid var(--grey-light);
   border-bottom: 2px solid var(--grey-light);
   margin-bottom: 119px;
   list-style-type: none;
-    outline: 1px solid red;
-  outline-offset: -5px;
+
 }
 
 .partners__item img {
   opacity: 0.2;
-    outline: 1px solid blue;
-  outline-offset: -5px;
+
 }
 
 .partners__item img:hover {
@@ -550,8 +549,9 @@ button {
 .partners__item img:active {
   opacity: 0.1;
 }
+/*  section partners  end */
 
-/*    map     */
+/*    section map  start    */
 
 .map {
   position: relative;
