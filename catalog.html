@@ -30,19 +30,15 @@
           <li><a class="link">Магазин</a></li>
           <li><a class="link" href="#">Контакты</a></li>
         </ul>
-        <div class="basket-navigation">
           <a href="#" class="basket">Корзина</a>
-        </div>
       </nav>
     </div>
   </header>
   <main class="page-main">
     <div class="page-main__header">
-      <div class="container">
         <h1>Магазин готовых шаблонов</h1>
-      </div>
     </div>
-<div class="container">
+<div class="wrap-catalog container">
       <section class="page-main__filter">
         <h2 class="visually-hidden">Фильтр шаблонов</h2>
         <form class="filter" action="https://echo.htmlacademy.ru" method="get">
@@ -123,39 +119,41 @@
         <h2 class="visually-hidden">Каталог шаблонов</h2>
         <div class="catalog__header sort-catalog">
           <p class="sort-catalog__title">Сортировать:</p>
-          <ul class="sort-catalog__type">
-            <li class="sort-type">
-              <a href="#" class="sort-type__link">
-                По цене
-              </a>
-            </li>
-            <li class="sort-type">
-              <a href="#" class="sort-type__link">
-                По типу
-              </a>
-            </li>
-            <li class="sort-type">
-              <a href="#" class="sort-type__link">
-                По названию
-              </a>
-            </li>
-          </ul>
-          <ul class="sort-direction">
-            <li class="sort-direction__item">
-              <a href="#" class="sort-direction__link" title="Сортировать по убыванию">
-<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M5.5 10L0 0H11" />
-</svg>
-              </a>
-            </li>
-            <li class="sort-direction__item">
-              <a href="#" class="sort-direction__link" title="сортировать по возрастанию">
-<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M5.5 0L0 10H11L5.5 0Z" />
-</svg>
-              </a>
-            </li>
-          </ul>
+<div class="sort-catalog__wrap">
+            <ul class="sort-catalog__type">
+              <li class="sort-type">
+                <a href="#" class="sort-type__link">
+                  По цене
+                </a>
+              </li>
+              <li class="sort-type">
+                <a href="#" class="sort-type__link">
+                  По типу
+                </a>
+              </li>
+              <li class="sort-type">
+                <a href="#" class="sort-type__link">
+                  По названию
+                </a>
+              </li>
+            </ul>
+            <ul class="sort-direction">
+              <li class="sort-direction__item">
+                <a href="#" class="sort-direction__link" title="Сортировать по убыванию">
+                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 10L0 0H11" />
+                  </svg>
+                </a>
+              </li>
+              <li class="sort-direction__item">
+                <a href="#" class="sort-direction__link" title="сортировать по возрастанию">
+                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 0L0 10H11L5.5 0Z" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+</div>
         </div>
         <ul class="catalog-list">
           <li class="catalog-list__item card-product">
@@ -280,8 +278,6 @@
         </ul>
       </section>
 </div>
-  </main>
-  <footer class="main-footer">
     <section class="map">
       <h2 class="visually-hidden"> Как нас найти</h2>
       <img src="img/map/map.jpg" alt="карта" height="416">
@@ -300,6 +296,9 @@
         </div>
       </div>
     </section>
+  </main>
+  <footer class="main-footer">
+
     <div class="container">
       <section class="social">
         <h3 class="visually-hidden"> Мы в социальных сетях</h3>

@@ -49,8 +49,6 @@
   display: grid;
   align-content: start;
   grid-template-rows: min-content 1fr max-content;
-  align-content: start;
-
   position: relative;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
@@ -152,6 +150,7 @@ button {
 .main-header-logo:focus {
   opacity: 0.3;
 }
+/*  site-navigation start */
 
 .basket,
 .site-navigation a {
@@ -173,7 +172,7 @@ button {
 .site-navigation li + li {
   margin-left: 45px;
 }
-
+/* basket  */
 .basket:hover,
 .site-navigation a:hover {
   color: var(--basic-red-bright);
@@ -225,12 +224,14 @@ button {
   content: "";
   position: absolute;
   display: block;
-  top: 2px;
+  top: 8px;
   left: -38px;
   background: url(../img/cart-icon.svg) 0 0 no-repeat;
   width: 22px;
   height: 22px;
 }
+
+/*  site-navigation end */
 
 .slider {
   background-color: var(--grey-light);
@@ -842,6 +843,10 @@ background: var(--social-gradient--hover);
   line-height: 55px;
   color: var(--basic-black);
 }
+   .wrap-catalog {
+     display: grid;
+     grid-template-columns: 1fr 2fr;
+   }
 
 /*   Filter  */
 .filter-range {
@@ -1099,11 +1104,19 @@ box-sizing: border-box;
 /* */
 
 /* catalog-list */
+
+.catalog {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
 .sort-catalog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   text-align: right;
 }
 
 .sort-catalog__title {
+  justify-self: start;
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
@@ -1111,8 +1124,14 @@ box-sizing: border-box;
   text-transform: uppercase;
   display: inline;
 }
+.sort-catalog__wrap {
+  display: flex;
+  justify-content: space-between;
+}
 .sort-catalog__type {
+  justify-self: start;
   display: inline;
+
 }
 .sort-type {
  display: inline;
@@ -1121,6 +1140,7 @@ box-sizing: border-box;
 
 .sort-direction {
   display: inline;
+  width: 40px;
 }
 
 .sort-direction__item {
@@ -1155,6 +1175,9 @@ box-sizing: border-box;
 /* sort end */
 
 .catalog-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   list-style-type: none;
 }
 .card-product {
