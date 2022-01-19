@@ -118,6 +118,7 @@ button {
 .container {
   width: 1160px;
   margin: 0 auto;
+  outline: 1px dotted red;
 }
 .page-main {
   display: grid;
@@ -168,9 +169,10 @@ button {
   display: flex;
   justify-content: flex-start;
   list-style-type: none;
-    width: 650px;
+    width: 670px;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 10px;
 }
 
 /* .site-navigation li + li {
@@ -178,6 +180,7 @@ button {
 } */
 .site-navigation li {
   margin-right: 45px;
+
 }
 .site-navigation li:last-child {
   margin-right: 0;
@@ -230,6 +233,7 @@ button {
   cursor: pointer;
   margin-left: 24px;
   position: relative;
+  margin-top: 10px;
 }
 .basket::before {
   content: "";
@@ -247,7 +251,7 @@ button {
 .slider {
   background-color: var(--grey-light);
   position: relative;
-  max-height: 431px;
+  /* max-height: 431px; */
   margin-bottom: 80px;
 }
 .slider-wrap {
@@ -317,7 +321,7 @@ button {
   width: 86px;
   height: 18px;
   position: absolute;
-  bottom: 80px;
+  bottom: 117px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
@@ -358,7 +362,7 @@ button {
 .services__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 80px;
+  gap: 80px;
   justify-content: start;
   border-bottom: 2px solid var(--grey-light);
   padding-bottom: 80px;
@@ -448,7 +452,7 @@ button {
 }
 .about__table {
   margin: 0 auto;
-  border-spacing: 25px;
+  border-spacing: 16px;
 }
 .about__table tr + tr {
   margin-top: 11px;
@@ -462,9 +466,11 @@ button {
   max-width: 650px;
   width: 650px;
 }
-/* .about__item {
-   width: 365px;
-} */
+.about__item {
+   /* width: 365px; */
+    display: flex;
+    flex-direction: column;
+}
 
 .about__title {
   padding-top: 34px;
@@ -513,10 +519,14 @@ button {
   margin-right: 30px;
 }
 .about__img {
-  width: 360px;
-  height: 208px;
+  /* width: 360px; */
+  height: 207px;
   margin-bottom: 37px;
   background: var(--yellow-middle);
+}
+.about__img > img {
+  width: 100%;
+
 }
 
 .about__table-num {
@@ -593,10 +603,10 @@ button {
   top: 54px;
   left: 0;
   width: 319px;
-  height: 308px;
+  /* height: 308px; */
   background-color: var(--basic-white);
   text-align: left;
-  padding: 49px 50px 0 50px;
+  padding: 49px 50px 40px 50px;
 }
 .map-contact__title {
   font-size: 18px;
@@ -1274,6 +1284,8 @@ list-style-type: none;
   text-align: center;
   visibility: hidden;
   padding-top: 26px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .card-product__title {
   text-transform: uppercase;
