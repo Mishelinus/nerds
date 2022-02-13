@@ -528,6 +528,11 @@ align-self: center;
   height: 207px;
   margin-bottom: 37px;
   background: var(--yellow-middle);
+  background-image: url('../img/about/nerds-illustration.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
 }
 .about__img > img {
   width: 100%;
@@ -610,9 +615,15 @@ align-items: center;
   grid-column: 1/-1;
   position: relative;
 }
-.map img {
+.map__img {
   width: 100%;
-  object-fit: cover;
+  min-height: 416px;
+  display: block;
+  background-image: url('../img/map/map.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
 }
 .map__wrapper {
   position: absolute;
