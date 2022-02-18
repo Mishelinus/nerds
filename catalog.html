@@ -31,9 +31,9 @@
           <li><a class="link" href="#">Контакты</a></li>
         </ul>
 
-<ul class="user-navigation">
-  <li><a href="#" class="basket ">Корзина</a></li>
-</ul>
+        <ul class="user-navigation">
+          <li><a href="#" class="basket ">Корзина</a></li>
+        </ul>
 
       </nav>
     </div>
@@ -46,72 +46,83 @@
       <section class="page-catalog__filter">
         <h2 class="visually-hidden">Фильтр шаблонов</h2>
         <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="price">
+          <fieldset class="filter__item price">
             <legend>Стоимость:</legend>
-            <div class="filter-range">
-              <input class="filter-range__input visually-hidden" type="range">
-              <label class="filter-range__label">
-                <span></span>
-              </label>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="
+                width: 59%;
+                margin-left: 8%" ></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0" style="
+              left: 8%
+            "></div>
+              <div class="toggle toggle-max" tabindex="0" style="
+              left: 62%
+            "></div>
             </div>
             <p>
               <label class="filter__min-price">от
-                <input type="text" name="min-price" placeholder="0">
+                <input type="text" name="min-price" value="0">
               </label>
               <label class="filter__max-price">до
-                <input type="text" name="max-price" placeholder="150 000">
+                <input type="text" name="max-price" value="15000">
               </label>
 
             </p>
 
           </fieldset>
-          <fieldset>
+          <fieldset class="filter__item layout">
             <legend>Сетка:</legend>
             <ul class="filter__list-radio list-radio">
               <li class="list-radio__item">
-                <input class="list-radio__input" type="radio" name="grid" value="adaptive" id="grids" checked disabled>
+                <input class="list-radio__input visually-hidden" type="radio" name="grid" value="adaptive" id="grids"
+                  checked disabled>
                 <label class="list-radio__label" for="grids">Адаптивная
                 </label>
 
               </li>
               <li class="list-radio__item">
-                <input class="list-radio__input" type="radio" name="grid" value="fixed" id="fixeds">
+                <input class="list-radio__input visually-hidden" type="radio" name="grid" value="fixed" id="fixeds">
                 <label class="list-radio__label" for="fixeds">Фиксированная
                 </label>
               </li>
               <li class="list-radio__item">
-                <input class="list-radio__input" type="radio" name="grid" value="elastic" id="elastics">
+                <input class="list-radio__input visually-hidden" type="radio" name="grid" value="elastic" id="elastics">
                 <label class="list-radio__label" for="elastics">Резиновая
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter__item features">
             <legend>Особенности:</legend>
             <ul class="filter__list-checkbox list-checkbox">
               <li class="list-checkbox__item">
-                <input class="list-checkbox__input" type="checkbox" name="checkbox" value="slider" id="check-1" checked
-                  disabled>
+                <input class="list-checkbox__input visually-hidden" type="checkbox" name="checkbox" value="slider"
+                  id="check-1" checked disabled>
                 <label class="list-checkbox__label" for="check-1"> Слайдер </label>
               </li>
               <li class="list-checkbox__item">
-                <input class="list-checkbox__input" type="checkbox" name="checkbox" value="advantages" id="check-2">
+                <input class="list-checkbox__input visually-hidden" type="checkbox" name="checkbox" value="advantages"
+                  id="check-2">
                 <label class="list-checkbox__label" for="check-2"> Блок преимуществ</label>
               </li>
               <li class="list-checkbox__item">
 
-                <input class="list-checkbox__input" type="checkbox" name="checkbox" value="news" id="check-3" checked
-                  disabled>
+                <input class="list-checkbox__input visually-hidden" type="checkbox" name="checkbox" value="news"
+                  id="check-3" checked disabled>
                 <label class="list-checkbox__label" for="check-3"> <span>Новости</span></label>
               </li>
               <li class="list-checkbox__item">
 
-                <input class="list-checkbox__input" type="checkbox" name="checkbox" value="galery" id="check-4" >
+                <input class="list-checkbox__input visually-hidden" type="checkbox" name="checkbox" value="galery"
+                  id="check-4">
                 <label class="list-checkbox__label" for="check-4"> Галерея </label>
               </li>
               <li class="list-checkbox__item">
 
-                <input class="list-checkbox__input" type="checkbox" name="checkbox" value="basket" id="check-5" >
+                <input class="list-checkbox__input visually-hidden" type="checkbox" name="checkbox" value="basket"
+                  id="check-5">
                 <label class="list-checkbox__label" for="check-5"> Корзина</label>
               </li>
             </ul>
@@ -127,7 +138,7 @@
           <div class="sort-catalog__wrap">
             <ul class="sort-catalog__type">
               <li class="sort-type">
-                <a class="sort-type__link">
+                <a class="sort-type__link sort-type__link--current">
                   По цене
                 </a>
               </li>
@@ -144,7 +155,7 @@
             </ul>
             <ul class="sort-direction">
               <li class="sort-direction__item">
-                <a class="sort-direction__link" title="Сортировать по убыванию">
+                <a class="sort-direction__link sort-direction__link--current" title="Сортировать по убыванию">
                   <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 10L0 0H11" />
                   </svg>
@@ -270,7 +281,7 @@
         </article>
 
         <ul class="pagination">
-          <li class="pagination__item"><a class="pagination-link">1</a></li>
+          <li class="pagination__item"><a class="pagination-link  pagination-link--current">1</a></li>
           <li class="pagination__item">
             <a class="pagination-link" href="#">2</a>
           </li>
@@ -278,7 +289,7 @@
             <a class="pagination-link" href="#">3</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination-link pagination__btn btn" href="#">Следующая</a>
+            <a class="pagination-link pagination__btn--next btn" href="#">Следующая</a>
           </li>
         </ul>
       </div>
@@ -287,7 +298,8 @@
   </main>
   <section class="map">
     <h2 class="visually-hidden"> Как нас найти</h2>
-    <img src="img/map/map.jpg" alt="карта" height="416">
+    <div class="map__img">
+    </div>
     <div class="container">
       <div class="map__wrapper">
         <div class="map-contact">
@@ -303,6 +315,7 @@
       </div>
     </div>
   </section>
+  </main>
   <footer class="main-footer">
 
     <div class="container">
