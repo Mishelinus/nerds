@@ -671,6 +671,7 @@ position: absolute;
 .map__img iframe {
    border: none;
    width: 100%;
+   height: 416px;
 }
 
 .map-contact {
