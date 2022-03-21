@@ -44,6 +44,8 @@
   --contact-btn-close: rgba(251, 86, 90, 0.3);
 }
 
+/* Variables  end */
+
 .page-body {
   min-height: 100%;
   display: grid;
