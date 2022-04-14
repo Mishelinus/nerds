@@ -13,7 +13,7 @@
   --green-middle: #00bc6c; /*green*/
   --green-dark: #00aa62; /*green-dark*/
   --yellow-bright: #efc849;
-  --yellow-middle: #eab534; /*yellow/*
+  --yellow-middle: #eab534; /*yellow*/
   --yellow-dark: #e5a722;      /*yellow-dark*/
   --grey-light: #eeeeee; /* gray*/
   --grey-social: #e1e1e1; /*gray-88*/
@@ -258,6 +258,7 @@ button {
   display: grid;
   grid-template-columns: 1fr 2fr;
   display: flex;
+  position: relative;
 }
 .slides {
   display: none;
@@ -326,18 +327,18 @@ button {
   transform: translateX(-50%);
   z-index: 2;
   list-style-type: none;
+  min-width: 90px;
+}
+.slides-control button {
+    background-color: var(--basic-white);
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
 }
 
-.slides-control li {
-  background-color: var(--basic-white);
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  position: relative;
-  cursor: pointer;
-}
-
-.slides-control-active::before {
+.slides-control .button-active::before {
   content: "";
   position: absolute;
   display: block;
@@ -350,8 +351,11 @@ button {
   transform: translate(-50%, -50%);
 }
 
-.slides-control li + li {
+.slides-control button + button {
   margin-left: 17px;
+}
+.slides-control button:focus {
+  outline: 1px solid;
 }
 .services {
   margin-bottom: 25px;
@@ -422,8 +426,8 @@ button {
 }
 .services__btn:active,
 .services__btn:focus {
-  background: var(--red-dark);
-  color: rgba(255, 255, 255, 0.3);
+color: rgba(255,255,255,.3);
+box-shadow: inset 0 3px 0 rgb(0 0 0 / 10%);
 }
 
 .services__btn-apps {
@@ -1015,6 +1019,8 @@ button {
   display: block;
 }
 
+
+
 /* radio toggle end */
 
 /*  Checkbox */
@@ -1036,9 +1042,8 @@ button {
   cursor: pointer;
 }
 
-.list-checkbox__label:before {
+.list-checkbox__input + .list-checkbox__label::before {
   content: "";
-  /* display: inline-block; */
   position: absolute;
   width: 23px;
   height: 23px;
@@ -1050,17 +1055,23 @@ button {
   background-position: 0 0;
   opacity: 0.3;
 }
-.list-checkbox__input:checked + .list-checkbox__label:before {
+.list-checkbox__input:checked + .list-checkbox__label::before {
   background: url("../img/filter/checkbox-on.svg");
 }
 
 .list-checkbox__input:disabled + .list-checkbox__label {
   opacity: 0.3;
 }
-.list-checkbox__label:hover:before,
-.list-checkbox__label:focus:before {
-  opacity: 1;
+.list__input:hover + .list-checkbox__label::before {
+   opacity: 1;
 }
+.list__input:focus + label {
+  opacity: 1;
+  outline: 1px solid;
+  outline-offset: 5px;
+}
+
+
 /* отменяю hover у disabled */
 .list-checkbox__input:disabled + .list-checkbox__label:hover:before {
   opacity: 0.3;
@@ -1236,7 +1247,8 @@ button {
   width: 100%;
   min-height: 231px;
   text-align: center;
-  visibility: hidden;
+  /* visibility: hidden; */
+  opacity: 0;
   padding-top: 26px;
   padding-left: 20px;
   padding-right: 20px;
@@ -1278,14 +1290,21 @@ button {
   box-shadow: inset 0px 3px 0px var(--box-shadow);
 }
 
-.card-product:hover {
+
+ .card-product:hover .card-product__descr {
+     /* visibility: visible; */
+     opacity: 1;
   box-shadow: 0px 6px 15px var(--shadow);
   border-top-color: var(--grey-text-social);
 }
 
-.card-product:hover .card-product__descr {
-  visibility: visible;
+.card-product__descr:focus-within {
+  opacity: 1;
+ 
 }
+
+
+
 
 /* pagination */
 
