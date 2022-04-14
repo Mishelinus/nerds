@@ -1290,7 +1290,6 @@ box-shadow: inset 0 3px 0 rgb(0 0 0 / 10%);
   box-shadow: inset 0px 3px 0px var(--box-shadow);
 }
 
-
  .card-product:hover .card-product__descr {
      /* visibility: visible; */
      opacity: 1;
@@ -1300,11 +1299,7 @@ box-shadow: inset 0 3px 0 rgb(0 0 0 / 10%);
 
 .card-product__descr:focus-within {
   opacity: 1;
- 
 }
-
-
-
 
 /* pagination */
 
