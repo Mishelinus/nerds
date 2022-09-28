@@ -7,7 +7,7 @@ logs
 # Ignore the build directory
 /dist
 
-# The file containing environment variables 
+# The file containing environment variables
 .env
 
 # Ignore IDE specific files
@@ -15,3 +15,4 @@ logs
 .vscode/
 *.sw*
 .DS_Store
+test_slide.js

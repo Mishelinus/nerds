@@ -14,7 +14,7 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page-body">
@@ -42,60 +42,60 @@
     <h1 class="visually-hidden">Интернет магазин «Nёrds»</h1>
     <section class="slider">
 
-      <div class="container slider-wrap">
-        <h2 class="visually-hidden">Наши преимущества</h2>
-        <div class="slides slides-one slides-active">
-          <div class="slides__inner">
-            <div class="title slides__title">Долго, дорого, <br> скрупулезно.</div>
-            <div class="slides__text">
-              Математически выверенный дизайн <br>
-              для вашего сайта или мобильного приложения.
-            </div>
-            <a href="blank.html" class="btn slides__btn">
-              узнать больше
-            </a>
-          </div>
-          <div class="slides__img" style="background-image: url(img/header/slider/index-slide1.png)">
-          </div>
-        </div>
-        <div class="slides slides-one ">
-          <div class="slides__inner">
-            <div class="title slides__title">Любим математику <br>
-              как никто другой</div>
-            <div class="slides__text">
-              Никакого креатива, только математические формулы <br>
-              для расчета идеальных пропорций
-            </div>
-            <a class="btn slides__btn">
-              узнать больше
-            </a>
-          </div>
-          <div class="slides__img" style="background-image: url(img/header/slider/index-slide2.png)">
-          </div>
-        </div>
-        <div class="slides slides-one ">
-          <div class="slides__inner">
-            <div class="title slides__title">Только ночь, <br>
-              только хардкор</div>
-            <div class="slides__text">
-              Работать днем, как все? Мы против этого. <br>
-              Ближе к полуночи работа только начинается.
-            </div>
-            <a class="btn slides__btn">
-              УЗНАТЬ БОЛЬШЕ
-            </a>
-          </div>
-          <div class="slides__img" style="background-image: url(img/header/slider/index-slide3.png)">
-          </div>
-        </div>
-
-
-        <div class="slides-control ">
-          <button class="button-active" type="button" aria-label="первый слайд"></button>
-          <button type="button" aria-label="Второй слайд"></button>
-          <button type="button" aria-label="Третий слайд"></button>
-          </div>
+<div class="container slider-wrap">
+  <h2 class="visually-hidden">Наши преимущества</h2>
+  <div class="slides slides-one slides-active">
+    <div class="slides__inner">
+      <div class="title slides__title">Долго, дорого, <br> скрупулезно.</div>
+      <div class="slides__text">
+        Математически выверенный дизайн <br>
+        для вашего сайта или мобильного приложения.
       </div>
+      <a href="blank.html" class="btn slides__btn">
+        узнать больше
+      </a>
+    </div>
+    <div class="slides__img" style="background-image: url(img/header/slider/index-slide1.png)">
+    </div>
+  </div>
+  <div class="slides slides-one ">
+    <div class="slides__inner">
+      <div class="title slides__title">Любим математику <br>
+        как никто другой</div>
+      <div class="slides__text">
+        Никакого креатива, только математические формулы <br>
+        для расчета идеальных пропорций
+      </div>
+      <a class="btn slides__btn">
+        узнать больше
+      </a>
+    </div>
+    <div class="slides__img" style="background-image: url(img/header/slider/index-slide2.png)">
+    </div>
+  </div>
+  <div class="slides slides-one ">
+    <div class="slides__inner">
+      <div class="title slides__title">Только ночь, <br>
+        только хардкор</div>
+      <div class="slides__text">
+        Работать днем, как все? Мы против этого. <br>
+        Ближе к полуночи работа только начинается.
+      </div>
+      <a class="btn slides__btn">
+        УЗНАТЬ БОЛЬШЕ
+      </a>
+    </div>
+    <div class="slides__img" style="background-image: url(img/header/slider/index-slide3.png)">
+    </div>
+  </div>
+
+
+  <div class="slides-control ">
+    <button class="button-slide button-active" type="button" aria-label="первый слайд"></button>
+    <button class="button-slide" type=" button" aria-label="Второй слайд"></button>
+    <button class="button-slide" type="button" aria-label="Третий слайд"></button>
+  </div>
+</div>
     </section>
     <section class="services container">
 
@@ -275,16 +275,16 @@
     <form class="mail-form" method="post" action="https://echo.htmlacademy.ru">
       <div class="mail-form__box">
         <p><label>Ваше имя:<br>
-            <input type="text" name="name" placeholder="Имя Фамилия" required>
+            <input type="text" name="name" placeholder="Имя Фамилия">
           </label></p>
 
 
         <p><label>Ваш email:<br>
-            <input type="email" name="email" placeholder="email@example.com " required>
+            <input type="email" name="email" placeholder="email@example.com ">
           </label></p>
       </div>
       <label>Текст письма:<br>
-        <textarea name="text" placeholder="В свободной форме" required></textarea>
+        <textarea name="text" placeholder="В свободной форме"></textarea>
       </label>
       <input class="btn button" type="submit" value="Отправить">
     </form>
@@ -292,6 +292,8 @@
       <span class="visually-hydden">закрыть</span>
     </button>
   </section>
+  <script src="js/slide.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 
 </html>
