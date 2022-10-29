@@ -268,6 +268,18 @@ button {
   display: grid;
   grid-template-columns: max-content 1fr;
   /*  width: 100%;  */
+  animation: slideToRight 1s ease;
+}
+@keyframes slideToRight {
+  0% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+
+  }
 }
 
 .slides__inner {
@@ -1354,7 +1366,6 @@ button {
 /*     modal   */
 
 .modal {
-  display: none;
   margin: auto;
   position: fixed;
   top: 0;
@@ -1364,10 +1375,16 @@ button {
   z-index: 10;
   background: var(--basic-white);
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.6);
+  transform: translateY(-100%) scale(0);
+  transition: .4s linear;
 }
 
 .modal_show {
-  display: block;
+  transform: translateY(0) scale(100%);
+}
+
+.modal-error {
+  animation: shakeErrorForm 0.6s;
 }
 
 /*  modal__mail */
@@ -1378,8 +1395,6 @@ button {
   padding-top: 63px;
   padding-left: 100px;
   padding-bottom: 84px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 .modal__mail h3 {
   font-size: 45px;
@@ -1540,3 +1555,29 @@ button {
   width: 100%;
   padding: 15px 25px 15px 25px;
 }
+/*  animations  */
+
+
+@keyframes shakeErrorForm {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-15px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(15px);
+  }
+}
+
+
