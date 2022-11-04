@@ -38,14 +38,12 @@ clickCloseModal.addEventListener("click", function () {
   modal.offsetWidth = modal.offsetWidth;
   let issClass = modal.classList.contains("modal_show");
   if (!issClass) {
-    console.log("no isset class");
     localStorage.removeItem("name");
   }
 });
 
 form.addEventListener("submit", function (evt) {
   if (!userName.value || !userEmail.value || !userText.value) {
-    console.log("есть не заполненные поля");
     modal.classList.remove("modal-error");
     modal.offsetWidth = modal.offsetWidth;
     modal.classList.add("modal-error");

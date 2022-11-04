@@ -1294,14 +1294,13 @@ button {
   box-shadow: inset 0px 3px 0px var(--box-shadow);
 }
 
-.card-product:hover .card-product__descr {
-  /* visibility: visible; */
-  opacity: 1;
+.card-product:hover {
   box-shadow: 0px 6px 15px var(--shadow);
   border-top-color: var(--grey-text-social);
 }
 
-.card-product__descr:focus-within {
+.card-product:hover .card-product__descr {
+  visibility: visible;
   opacity: 1;
 }
 
@@ -1614,7 +1613,7 @@ button {
     transform: translateY(0);
   }
   70% {
-     transform: translateY(-10px);
+    transform: translateY(-10px);
   }
   90% {
     transform: translateY(30px);

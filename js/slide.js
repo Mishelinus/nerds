@@ -14,5 +14,3 @@ let clickHandler = function (button, slide) {
 for (let i = 0; i < slidesControl.length; i++) {
   clickHandler(slidesControl[i], slides[i]);
 }
-
-

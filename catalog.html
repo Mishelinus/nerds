@@ -372,30 +372,28 @@
       </section>
     </div>
   </footer>
-
-  <section class="modal modal__mail">
-    <h3>Напишите нам</h3>
-    <form class="mail-form" method="post" action="https://echo.htmlacademy.ru">
-      <div class="mail-form__box">
-        <p><label>Ваше имя:<br>
-            <input type="text" name="name" placeholder="Имя Фамилия" required>
-          </label></p>
-
-
-        <p><label>Ваш email:<br>
-            <input type="email" name="email" placeholder="email@example.com " required>
-          </label></p>
-      </div>
-      <label>Текст письма:<br>
-        <textarea name="text" placeholder="В свободной форме" required></textarea>
-      </label>
-      <input class="btn button" type="submit" value="Отправить">
-    </form>
-    <button class="btn-close" type="button" aria-label="Закрыть">
-      <span class="visually-hydden">закрыть</span>
-    </button>
-  </section>
-  <script src="js/modal.js"></script>
+<div class="overlay"></div>
+<section class="modal modal__mail">
+  <h3>Напишите нам</h3>
+  <form class="mail-form" method="post" action="https://echo.htmlacademy.ru">
+    <div class="mail-form__box">
+      <p><label>Ваше имя:<br>
+          <input type="text" name="name" placeholder="Имя Фамилия">
+        </label></p>
+      <p><label>Ваш email:<br>
+          <input type="email" name="email" placeholder="email@example.com ">
+        </label></p>
+    </div>
+    <label>Текст письма:<br>
+      <textarea name="text" placeholder="В свободной форме"></textarea>
+    </label>
+    <input class="btn button" type="submit" value="Отправить">
+  </form>
+  <button class="btn-close" type="button" aria-label="Закрыть">
+    <span class="visually-hydden">закрыть</span>
+  </button>
+</section>
+  <script src="js/modal.min.js"></script>
 </body>
 
 </html>
