@@ -278,7 +278,6 @@ button {
   100% {
     transform: translateX(0);
     opacity: 1;
-
   }
 }
 
@@ -1365,22 +1364,38 @@ button {
 
 /*     modal   */
 
+.overlay {
+  position: relative;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.85);
+}
+.overlay_show {
+  opacity: 1;
+  position: fixed;
+}
+
 .modal {
+  display: none;
   margin: auto;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 11;
   background: var(--basic-white);
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.6);
-  transform: translateY(-100%) scale(0);
-  transition: .4s linear;
+  transition: 0.4s linear;
 }
 
 .modal_show {
-  transform: translateY(0) scale(100%);
+  display: block;
+  animation: bounce 0.6s;
 }
 
 .modal-error {
@@ -1557,7 +1572,6 @@ button {
 }
 /*  animations  */
 
-
 @keyframes shakeErrorForm {
   0%,
   100% {
@@ -1580,4 +1594,32 @@ button {
   }
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
+@keyframes bounce-out {
+  0% {
+    transform: translateY(0);
+  }
+  70% {
+     transform: translateY(-10px);
+  }
+  90% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(-2000px);
+  }
+}

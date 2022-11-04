@@ -5,6 +5,7 @@ const form = modal.querySelector("form");
 const userName = modal.querySelector("[name=name]");
 const userEmail = modal.querySelector("[name=email]");
 const userText = modal.querySelector("[name=text]");
+const overlay = document.querySelector(".overlay");
 
 let isStorageSupport = true;
 let storage = "";
@@ -20,6 +21,7 @@ clickModalShow.addEventListener("click", function (evt) {
   evt.preventDefault();
 
   modal.classList.add("modal_show");
+  overlay.classList.add("overlay_show");
   //фокус на поле name
 
   if (storage) {
@@ -31,22 +33,18 @@ clickModalShow.addEventListener("click", function (evt) {
 });
 
 clickCloseModal.addEventListener("click", function () {
-
   modal.classList.remove("modal_show", "modal-error");
+  overlay.classList.remove("overlay_show");
   modal.offsetWidth = modal.offsetWidth;
   let issClass = modal.classList.contains("modal_show");
   if (!issClass) {
     console.log("no isset class");
     localStorage.removeItem("name");
   }
-
 });
 
 form.addEventListener("submit", function (evt) {
-
-
   if (!userName.value || !userEmail.value || !userText.value) {
-
     console.log("есть не заполненные поля");
     modal.classList.remove("modal-error");
     modal.offsetWidth = modal.offsetWidth;
@@ -64,9 +62,10 @@ window.addEventListener("keydown", function (evt) {
     if (modal.classList.contains("modal_show")) {
       evt.preventDefault();
       modal.classList.remove("modal_show", "modal-error");
+      overlay.classList.remove("overlay_show");
     }
   }
 });
-window.addEventListener('click', function(){
-modal.classList.remove('modal-show');
+window.addEventListener("click", function () {
+  modal.classList.remove("modal-show");
 });
